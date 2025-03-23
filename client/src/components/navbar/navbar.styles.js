@@ -1,6 +1,28 @@
 import { styled, keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 
+const slideIn = keyframes`
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const slideOut = keyframes`
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+`;
+
 export const NavbarContainer = styled.div`
     display: flex;
     justify-content: center;
@@ -23,20 +45,6 @@ export const Image = styled.img`
         height: auto;
     }
 `;
-
-export const NavLinkText = styled(Link)`
-  color: ${({ theme }) => theme.colors.text};
-  text-decoration: none;
-  font-size: ${({ theme }) => theme.typography.sizes.md};
-  font-family: ${({ theme }) => theme.typography.font};
-  transition: 0.3s;
-  cursor: pointer;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.primary};
-  }
-`;
-
 
 export const NavLinksContainer = styled.ul`
   display: flex;
@@ -85,6 +93,19 @@ export const NavLink = styled.div`
   }
 `;
 
+export const NavLinkText = styled(Link)`
+  color: ${({ theme }) => theme.colors.text};
+  text-decoration: none;
+  font-size: ${({ theme }) => theme.typography.sizes.md};
+  font-family: ${({ theme }) => theme.typography.font};
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+`;
+
 export const HamburgerIcon = styled.div`
   display: none;
   cursor: pointer;
@@ -98,30 +119,8 @@ export const HamburgerIcon = styled.div`
   }
 `;
 
-const slideIn = keyframes`
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
-
-const slideOut = keyframes`
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-`;
-
 export const FullScreenMenu = styled.div`
-display: none;
+  display: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 

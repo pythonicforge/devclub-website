@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { NavbarContainer, ImageContainer, Image, NavLinkText, NavLinksContainer, NavLink, HamburgerIcon, FullScreenMenu, DesktopNavLinksContainer, CloseButton } from "./navbar.styles";
+import { NavbarContainer, ImageContainer, Image, NavLinksContainer, NavLink,  NavLinkText, HamburgerIcon, FullScreenMenu, DesktopNavLinksContainer, CloseButton } from "./navbar.styles";
 
 import logo from '../../../public/images/logo.png'
 import { GrHomeRounded } from "react-icons/gr";
