@@ -24,7 +24,7 @@ const websiteTheme = {
     },
   },
   spacing: {
-    xs: "4px",
+    xs: "2px",
     sm: "8px",
     md: "16px",
     lg: "24px",

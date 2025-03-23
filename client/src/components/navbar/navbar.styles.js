@@ -24,6 +24,7 @@ const slideOut = keyframes`
 `;
 
 export const NavbarContainer = styled.div`
+    border: 1px solid #000000;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -57,8 +58,16 @@ export const ImageContainer = styled(Link)`
 `;
 
 export const Image = styled.img`
-    @media (max-width: 815px) {
+    width: 150px;
+    height: auto;
+
+    @media (max-width: 920px) {
         width: 130px;
+        height: auto;
+    }
+
+    @media (max-width: 490px) {
+        width: 90px;
         height: auto;
     }
 `;
@@ -85,7 +94,7 @@ export const NavLink = styled.div`
 
     @media (max-width: 815px) {
         gap: 0.75rem;
-        font-size: ${({ theme }) => theme.typography.sizes.xl};
+        font-size: ${({ theme }) => theme.typography.sizes.lg};
     }
 
     &:hover {
@@ -113,7 +122,7 @@ export const NavLink = styled.div`
 export const NavLinkText = styled(Link)`
   color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
-  font-size: ${({ theme }) => theme.typography.sizes.md};
+  font-size: ${({ theme }) => theme.typography.sizes.lg};
   font-family: ${({ theme }) => theme.typography.font};
   transition: 0.3s;
   cursor: pointer;
@@ -149,6 +158,11 @@ export const HamburgerIcon = styled.div`
 
   @media (max-width: 815px) {
     display: block;
+  }
+
+  @media (max-width: 490px){
+  font-size: 1rem;
+  top: 0.75rem;
   }
 `;
 
