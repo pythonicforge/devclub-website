@@ -34,6 +34,24 @@ export const NavbarContainer = styled.div`
     @media (max-width: 815px) {
         align-items: flex-start;
     }
+
+    outline: none;
+  user-select: none;
+  appearance: none;
+  border: none;
+  background: none;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+    background: none;
+  }
+
+  &:active {
+    background-color: transparent;
+  }
+
 `;
 
 export const ImageContainer = styled.div`
@@ -113,6 +131,22 @@ export const HamburgerIcon = styled.div`
   position: absolute;
   top: 1rem;
   right: 0.1rem;
+  outline: none;
+  user-select: none;
+  appearance: none;
+  border: none;
+  background: none;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+    background: none;
+  }
+
+  &:active {
+    background-color: transparent;
+  }
 
   @media (max-width: 815px) {
     display: block;
@@ -120,29 +154,33 @@ export const HamburgerIcon = styled.div`
 `;
 
 export const FullScreenMenu = styled.div`
-  display: none;
+  visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
   @media (max-width: 815px) {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: ${({ theme }) => theme.colors.background};
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: ${({ menuOpen }) => (menuOpen ? "1" : "0")};
-  transform: ${({ menuOpen }) => (menuOpen ? "translateX(0)" : "translateX(100%)")};
-  animation: ${({ menuOpen }) => (menuOpen ? slideIn : slideOut)} 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  pointer-events: ${({ menuOpen }) => (menuOpen ? "auto" : "none")};
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ${({ theme }) => theme.colors.background};
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: ${({ menuOpen }) => (menuOpen ? "1" : "0")};
+    visibility: ${({ menuOpen }) => (menuOpen ? "visible" : "hidden")};
+    transform: ${({ menuOpen }) => (menuOpen ? "translateX(0)" : "translateX(100%)")};
+    
+    animation: ${({ menuOpen }) => (menuOpen ? slideIn : slideOut)} 0.3s ease-in-out forwards;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s linear ${({ menuOpen }) => (menuOpen ? "0s" : "0.3s")};
+    pointer-events: ${({ menuOpen }) => (menuOpen ? "auto" : "none")};
   }
 `;
+
 
 export const DesktopNavLinksContainer = styled.ul`
   display: flex;
@@ -160,4 +198,21 @@ export const CloseButton = styled.div`
   right: 1rem;
   font-size: 2rem;
   cursor: pointer;
+  outline: none;
+  user-select: none;
+  appearance: none;
+  border: none;
+  background: none;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+    background: none;
+  }
+
+  &:active {
+    background-color: transparent;
+  }
+
 `;
