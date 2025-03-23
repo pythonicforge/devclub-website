@@ -22,6 +22,10 @@ export const LandingContainer = styled.div`
      @media (max-width: 920px){
        margin: -2.5rem;
     }
+    background: url('../../../public/images/Canopus.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @media (max-width: 815px){
        margin: 2.5rem;
@@ -124,6 +128,53 @@ export const Image4 = styled.img`
     }
 `
 
+export const ImageContainer5 = styled.div`
+    position: absolute;
+    right: -78px;
+    top: 47%;
+    transform: translateY(-50%);
+    @media (max-width: 920px) {
+        right: -16%;
+    }
+    @media (max-width: 490px) {
+        right: -15%;
+    }
+`
+
+export const Image5 = styled.img`
+    width: 100px;
+    height: auto;
+    @media (max-width: 920px) {
+        width: 50px;
+    }
+    @media (max-width: 490px) {
+        width: 30px;
+    }
+`
+
+export const ImageContainer6 = styled.div`
+    position: absolute;
+    left: -75px;
+    top: 60%;
+    transform: translateY(-50%);
+    @media (max-width: 920px) {
+        left: -20%;
+    }
+    @media (max-width: 490px) {
+        left: -15%;
+    }
+`
+
+export const Image6 = styled.img`
+    width: 100px;
+    height: auto;
+    @media (max-width: 920px) {
+        width: 50px;
+    }
+    @media (max-width: 490px) {
+        width: 30px;
+    }
+`
 
 export const HeroSubHeading = styled.p`
     text-align: center;
@@ -148,6 +199,7 @@ export const HeroHeadingLine1 = styled.h1`
     font-size: 6rem;
     margin: -2rem;
     padding: 0;
+    position: relative;
     // border: 1px solid black;
     @media (max-width: 920px){
         font-size: 3rem;
@@ -164,6 +216,7 @@ export const HeroHeadingLine2 = styled.h1`
     font-family: ${({ theme }) => theme.typography.font};
     font-size: 6rem;
     margin: -1.5rem 0 -1rem 0;
+    position: relative;
     // border: 1px solid black;
     @media (max-width: 920px){
         font-size: 3rem;
