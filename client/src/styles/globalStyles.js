@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Mona Sans', sans-serif;
+    font-family: ${({ theme }) => theme.typography.font};
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.text};
   }
