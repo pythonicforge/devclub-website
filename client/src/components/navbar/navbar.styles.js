@@ -51,10 +51,9 @@ export const NavbarContainer = styled.div`
   &:active {
     background-color: transparent;
   }
-
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled(Link)`
 `;
 
 export const Image = styled.img`
@@ -194,9 +193,9 @@ export const DesktopNavLinksContainer = styled.ul`
 
 export const CloseButton = styled.div`
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 2rem;
+  top: 2.75rem;
+  right: 2rem;
+  font-size: 1.75rem;
   cursor: pointer;
   outline: none;
   user-select: none;

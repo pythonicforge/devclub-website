@@ -19,12 +19,38 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <ImageContainer>
+      <ImageContainer to={'/'}>
         <Image src={logo} alt="DevClub Logo" />
       </ImageContainer>
       <HamburgerIcon onClick={toggleMenu}>
         <RxHamburgerMenu />
       </HamburgerIcon>
+      <DesktopNavLinksContainer>
+        <NavLink>
+          <GrHomeRounded />
+          <NavLinkText to={'/'}>Home</NavLinkText>
+        </NavLink>
+        <NavLink>
+          <RiQuestionMark />
+          <NavLinkText to={'/about'}>About Us</NavLinkText>
+        </NavLink>
+        <NavLink>
+          <IoGitMergeOutline />
+          <NavLinkText to={'/projects'}>Projects</NavLinkText>
+        </NavLink>
+        <NavLink>
+          <BsGear />
+          <NavLinkText to={'/achievements'}>Achievements</NavLinkText>
+        </NavLink>
+        <NavLink>
+          <SlCalender />
+          <NavLinkText to={'/events'}>Events</NavLinkText>
+        </NavLink>
+        <NavLink>
+          <IoWaterOutline />
+          <NavLinkText to={'/resources'}>Resources</NavLinkText>
+        </NavLink>
+      </DesktopNavLinksContainer>
       <FullScreenMenu menuOpen={menuOpen}>
         <CloseButton onClick={toggleMenu}>
           <RxCross1 />
@@ -56,32 +82,7 @@ const Navbar = () => {
           </NavLink>
         </NavLinksContainer>
       </FullScreenMenu>
-      <DesktopNavLinksContainer>
-        <NavLink>
-          <GrHomeRounded />
-          <NavLinkText to={'/'}>Home</NavLinkText>
-        </NavLink>
-        <NavLink>
-          <RiQuestionMark />
-          <NavLinkText to={'/about'}>About Us</NavLinkText>
-        </NavLink>
-        <NavLink>
-          <IoGitMergeOutline />
-          <NavLinkText to={'/projects'}>Projects</NavLinkText>
-        </NavLink>
-        <NavLink>
-          <BsGear />
-          <NavLinkText to={'/achievements'}>Achievements</NavLinkText>
-        </NavLink>
-        <NavLink>
-          <SlCalender />
-          <NavLinkText to={'/events'}>Events</NavLinkText>
-        </NavLink>
-        <NavLink>
-          <IoWaterOutline />
-          <NavLinkText to={'/resources'}>Resources</NavLinkText>
-        </NavLink>
-      </DesktopNavLinksContainer>
+      
     </NavbarContainer>
   )
 }
