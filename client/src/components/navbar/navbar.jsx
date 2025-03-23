@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 
-import { NavbarContainer, ImageContainer, Image, NavLinksContainer, NavLink,  NavLinkText, HamburgerIcon, FullScreenMenu, DesktopNavLinksContainer, CloseButton } from "./navbar.styles";
+import { NavbarContainer, ImageContainer, Image, NavLinksContainer, NavLink, NavLinkText, HamburgerIcon, FullScreenMenu, DesktopNavLinksContainer, CloseButton } from "./navbar.styles";
 
 import logo from '../../../public/images/logo.png'
+
 import { GrHomeRounded } from "react-icons/gr";
-import { RiQuestionMark } from "react-icons/ri";
+import { TbUserCode } from "react-icons/tb";
 import { IoGitMergeOutline, IoWaterOutline } from "react-icons/io5";
 import { BsGear } from "react-icons/bs";
 import { SlCalender } from "react-icons/sl";
@@ -31,10 +32,6 @@ const Navbar = () => {
           <NavLinkText to={'/'}>Home</NavLinkText>
         </NavLink>
         <NavLink>
-          <RiQuestionMark />
-          <NavLinkText to={'/about'}>About Us</NavLinkText>
-        </NavLink>
-        <NavLink>
           <IoGitMergeOutline />
           <NavLinkText to={'/projects'}>Projects</NavLinkText>
         </NavLink>
@@ -50,6 +47,10 @@ const Navbar = () => {
           <IoWaterOutline />
           <NavLinkText to={'/resources'}>Resources</NavLinkText>
         </NavLink>
+        <NavLink>
+          <TbUserCode />
+          <NavLinkText to={'/about'}>About Us</NavLinkText>
+        </NavLink>
       </DesktopNavLinksContainer>
       <FullScreenMenu menuOpen={menuOpen}>
         <CloseButton onClick={toggleMenu}>
@@ -59,10 +60,6 @@ const Navbar = () => {
           <NavLink onClick={toggleMenu}>
             <GrHomeRounded />
             <NavLinkText to={'/'}>Home</NavLinkText>
-          </NavLink>
-          <NavLink onClick={toggleMenu}>
-            <RiQuestionMark />
-            <NavLinkText to={'/about'}>About Us</NavLinkText>
           </NavLink>
           <NavLink onClick={toggleMenu}>
             <IoGitMergeOutline />
@@ -80,9 +77,13 @@ const Navbar = () => {
             <IoWaterOutline />
             <NavLinkText to={'/resources'}>Resources</NavLinkText>
           </NavLink>
+          <NavLink onClick={toggleMenu}>
+            <TbUserCode />
+            <NavLinkText to={'/about'}>About Us</NavLinkText>
+          </NavLink>
         </NavLinksContainer>
       </FullScreenMenu>
-      
+
     </NavbarContainer>
   )
 }
