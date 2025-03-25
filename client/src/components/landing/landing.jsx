@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { LandingContainer, ImageContainer, Image, ImageContainer2, Image2, HeroSubHeading, HeroHeadingLine1, HeroHeadingLine2, ImageContainer3, Image3, ImageContainer4, Image4, ImageContainer5, Image5, ImageContainer6, Image6 } from './landing.styles'
+import { LandingContainer, ImageContainer, Image, ImageContainer2, Image2, HeroSubHeading, HeroHeadingLine1, HeroHeadingLine2, ImageContainer3, Image3, ImageContainer4, Image4, ImageContainer5, Image5, ImageContainer6, Image6, EllipticalBlurOverlay } from './landing.styles'
 
 import universityLogo from '../../../public/images/university_logo.png'
 import heading_3 from '../../../public/images/heading_3.png'
@@ -38,6 +38,7 @@ const Landing = () => {
     </ImageContainer3>
     <ImageContainer4>
         <Image4 src={landing_wormhole} alt="Wormhole"/>
+        <EllipticalBlurOverlay />
     </ImageContainer4>
    </LandingContainer>
   )

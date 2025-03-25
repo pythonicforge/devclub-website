@@ -1,0 +1,1 @@
+font-size: ${({ theme }) => theme.typography.sizes.md};

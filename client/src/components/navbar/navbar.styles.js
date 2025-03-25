@@ -31,6 +31,7 @@ export const NavbarContainer = styled.div`
     align-items: center;
     margin: 2rem 1rem;
     position: relative;
+    overflow-x: hidden; // Ensure no horizontal overflow
 
     @media (max-width: 815px) {
         align-items: flex-start;

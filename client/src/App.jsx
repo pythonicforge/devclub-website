@@ -13,15 +13,17 @@ function App() {
   return (
     <ThemeProvider theme={websiteTheme}>
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/achievements" element={<Achievements />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/resources" element={<Resources />} />
-        </Routes>
+        <div style={{ overflowX: 'hidden',}}> {/* Ensure no horizontal overflow */}
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/achievements" element={<Achievements />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/resources" element={<Resources />} />
+          </Routes>
+        </div>
       </Router>
     </ThemeProvider>
   );
