@@ -11,13 +11,13 @@ export const StatusContainer = styled.div`
     background-color: ${({ status }) => {
         switch (status) {
             case 'upcoming':
-                return '#f0f0f0'; // Light gray
+                return '#f0f0f0';
             case 'in progress':
-                return '#fff9c6'; // Yellow
+                return '#fff9c6'; 
             case 'running':
-                return '#DEFFE1'; // Green
+                return '#DEFFE1'; 
             default:
-                return '#ffffff'; // Default white
+                return '#ffffff';
         }
     }};
     color: ${({ status }) => {
@@ -38,7 +38,6 @@ export const StatusIndicator = styled.div`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    // border: 1px solid #000000;
     background-color: ${({ status }) => {
         switch (status) {
             case 'upcoming':
@@ -57,4 +56,5 @@ export const StatusText = styled.p`
     font-size: 1rem;
     padding: 0;
     margin: 0;
+    text-transform: capitalize;
 `

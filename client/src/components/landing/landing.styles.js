@@ -24,10 +24,6 @@ export const LandingContainer = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-
-  @media (max-width: 815px) {
-    margin: 2.5rem;
-  }
 `;
 
 export const ImageContainer = styled.div``;
@@ -46,7 +42,6 @@ export const Image = styled.img`
 `;
 
 export const ImageContainer2 = styled.div`
-  height: fit-content;
   margin: -2.8rem;
 `;
 
@@ -64,10 +59,7 @@ export const Image2 = styled.img`
 `;
 
 export const ImageContainer3 = styled.div`
-  height: fit-content;
   margin: -2.8rem;
-  position: relative;
-  z-index: 1;
 
   @media (max-width: 920px) {
     margin: -1rem;
@@ -92,10 +84,7 @@ export const Image3 = styled.img`
 `;
 
 export const ImageContainer4 = styled.div`
-  height: fit-content;
-  margin: -7rem 0 -6rem 0;
-  position: relative;
-
+  margin: -7rem 0 -3rem 0;
   @media (max-width: 920px) {
     margin: -4rem 0 0 0;
   }
@@ -211,20 +200,3 @@ export const HeroHeadingLine2 = styled.h1`
   }
 `;
 
-export const EllipticalBlurOverlay = styled.div`
-  position: absolute;
-  bottom: -11rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 183px;
-  height: 183px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 10%, rgba(255, 255, 255, 0) 70%);
-  pointer-events: none;
-
-  @media (max-width: 920px) {
-    bottom: -8rem;
-  }
-  @media (max-width: 490px) {
-    bottom: -6rem;
-  }
-`;

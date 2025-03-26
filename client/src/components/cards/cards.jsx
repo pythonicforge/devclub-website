@@ -27,12 +27,12 @@ const ProjectCard = ({ banner, title, status, techStack, livePreview, github }) 
                 <Status status={status} />
             </StatusOuterContainer>
             <TechStack>
-                    <TechStackText>Tech Stack</TechStackText>
-                    <TechLogoContainer>
-                {techStack.map((tech, index) => (
-                    <TechLogo key={index}>{tech}</TechLogo>
-                ))}
-                    </TechLogoContainer>
+                <TechStackText>Tech Stack</TechStackText>
+                <TechLogoContainer>
+                    {techStack.map((tech, index) => (
+                        <TechLogo key={index}>{tech}</TechLogo>
+                    ))}
+                </TechLogoContainer>
             </TechStack>
             <ButtonContainer>
                 <CapsuleButton href={livePreview} target="_blank" rel="noopener noreferrer">

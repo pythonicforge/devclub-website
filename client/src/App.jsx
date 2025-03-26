@@ -13,7 +13,7 @@ function App() {
   return (
     <ThemeProvider theme={websiteTheme}>
       <Router>
-        <div style={{ overflowX: 'hidden',}}> {/* Ensure no horizontal overflow */}
+        <div style={{ overflowX: 'hidden', }}>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />

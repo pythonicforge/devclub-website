@@ -1,22 +1,15 @@
 import styled from "styled-components";
 
 export const TopProjectsSection = styled.div`
-  position: relative;
-  z-index: 2;
-  height: 800px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1) url('../../../public/images/bg_hero2.png') no-repeat center center;
+  backdrop-filter: blur(1px);
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  overflow-x: hidden; // Ensure no horizontal overflow
-  background: url('../../../public/images/bg_hero2.png');
+  overflow-x: hidden;
   background-size: 50% 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
 
   @media (max-width: 1024px) {
     background-size: 60% 60%;
-    height: 600px;
   }
 
   @media (max-width: 768px) {
@@ -34,21 +27,21 @@ export const TopProjectsSectionSubHeading = styled.p`
 
 export const TopProjectsSectionHeading = styled.h1`
   font-family: ${({ theme }) => theme.typography.font};
-  margin: -1rem 0 0 0;
+  margin: -1rem 0 0;
 
   span {
     font-style: italic;
     position: relative;
-  }
 
-  span::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0.2rem; // Adjust the spacing as needed
-    width: 100%;
-    height: 1px; // Adjust the thickness as needed
-    background-color: ${({ theme }) => theme.colors.text}; // Use the text color for the underline
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0.2rem;
+      width: 100%;
+      height: 1px;
+      background-color: ${({ theme }) => theme.colors.text};
+    }
   }
 
   @media (max-width: 768px) {
@@ -72,7 +65,6 @@ export const TopProjectsSectionHeader = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    align-items: center;
   }
 `;
 
@@ -87,15 +79,16 @@ export const TopProjectsImageContainer = styled.div`
 `;
 
 export const TopProjectsImage = styled.img`
-  width: 580px;
+  width: 100%;
+  max-width: 580px;
   height: auto;
 
   @media (max-width: 1024px) {
-    width: 300px;
+    max-width: 300px;
   }
 
   @media (max-width: 768px) {
-    width: 200px;
+    max-width: 200px;
   }
 `;
 
@@ -111,7 +104,6 @@ export const TabsContainer = styled.div`
   overflow: hidden;
   position: relative;
   background: ${({ theme }) => theme.colors.heading};
-  width: fit-content;
   margin: 0 auto;
 `;
 
@@ -143,15 +135,16 @@ export const ActiveTabHighlight = styled.div`
   background: ${({ theme }) => theme.colors.primary};
   border-radius: 2rem;
   transition: left 0.3s;
-  z-index: 0;
-
-  @media (max-width: 768px) {
-    left: ${({ activeTab }) => (activeTab === 'active' ? '0' : '50%')};
-    width: 50%;
-  }
 `;
 
 export const ProjectsContainer = styled.div`
   margin-top: 2rem;
-  // Add any additional styles for the projects container
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+  justify-items: center; /* Center all projects */
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
