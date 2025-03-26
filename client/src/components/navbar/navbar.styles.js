@@ -35,6 +35,7 @@ export const NavbarContainer = styled.div`
 
     @media (max-width: 815px) {
         align-items: flex-start;
+        margin-bottom: 4rem;
     }
 
     outline: none;

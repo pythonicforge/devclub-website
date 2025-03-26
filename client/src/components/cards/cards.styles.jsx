@@ -10,7 +10,6 @@ export const CardContainer = styled.div`
   font-family: ${({ theme }) => theme.typography.font};
   
   @media (max-width: 768px) {
-    // max-width: 100%;
     margin: 10px;
     padding: 15px;
   }

@@ -140,11 +140,11 @@ export const ActiveTabHighlight = styled.div`
 export const ProjectsContainer = styled.div`
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1rem;
-  justify-items: center; /* Center all projects */
+  grid-template-columns: repeat(auto-fit, minmax(415px, 1fr));
+  justify-items: center;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 `;
