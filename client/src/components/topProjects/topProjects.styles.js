@@ -113,14 +113,6 @@ export const TabsContainer = styled.div`
   background: ${({ theme }) => theme.colors.heading};
   width: fit-content;
   margin: 0 auto;
-
-  @media (max-width: 768px) {
-    width: 90%;
-  }
-
-  @media (max-width: 480px) {
-    width: 100%;
-  }
 `;
 
 export const Tab = styled.button`

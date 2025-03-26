@@ -3,6 +3,9 @@ import { TopProjectsSection, TopProjectsSectionHeader, TopProjectsSectionSubHead
 
 import left_arrow from '../../../public/images/left_arrow.png'
 import right_arrow from '../../../public/images/right_arrow.png'
+import bannerImg from "../../../public/images/card_img.png"
+
+import { ProjectCard } from '../cards'
 
 const TopProjects = () => {
   const [activeTab, setActiveTab] = useState('active');
@@ -34,9 +37,9 @@ const TopProjects = () => {
       </TabSwitcher>
       <ProjectsContainer>
         {activeTab === 'active' ? (
-          <div> {/* Render active projects here */} </div>
+          <div> <ProjectCard title={"NXTUP"} banner={bannerImg} status={"running"} livePreview={"https://nxtup.in"} github={"https://github.com"} techStack={["python", "js"]}/> </div>
         ) : (
-          <div> {/* Render past projects here */} </div>
+          <div> <ProjectCard title={"CapEval"} banner={bannerImg} status={"in progress"} livePreview={"LinkedIn"} github={"Hardik"} techStack={["python", "js"]}/> </div>
         )}
       </ProjectsContainer>
     </TopProjectsSection>
