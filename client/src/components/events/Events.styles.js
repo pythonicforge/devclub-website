@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import bgImg from '../../../public/images/Canopus_2.png'
 
 export const EventsWrapper = styled.div`
   display: flex;
@@ -6,7 +7,7 @@ export const EventsWrapper = styled.div`
   align-items: center;
   width: 100%;
   padding: 3rem 0rem;
-  background: url('../../../public/images/Canopus_2.png');
+  background-image: url(${bgImg});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

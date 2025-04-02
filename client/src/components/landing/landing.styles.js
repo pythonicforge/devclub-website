@@ -1,4 +1,5 @@
 import { styled, keyframes } from "styled-components";
+import bgImg from "../../../public/images/Canopus.png";
 
 const floatAnimation = keyframes`
   0% {
@@ -20,7 +21,7 @@ export const LandingContainer = styled.div`
   @media (max-width: 920px) {
     margin: -2.5rem;
   }
-  background: url('../../../public/images/Canopus.png');
+  background-image: url(${bgImg});
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
