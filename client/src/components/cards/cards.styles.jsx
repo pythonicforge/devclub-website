@@ -6,7 +6,8 @@ export const CardContainer = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
-  max-width: 350px;
+  max-width: 500px;
+  max-height: 500px;
   font-family: ${({ theme }) => theme.typography.font};
   
   @media (max-width: 768px) {
@@ -40,6 +41,7 @@ export const Title = styled.h2`
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
+    margin: 0 0 0 0.5rem;
   }
   }
 `;
@@ -56,14 +58,17 @@ export const StatusText = styled.p`
 `;
 
 export const TechStack = styled.div`
-    margin: -1.25rem 0 0 1rem;
+    margin: -1.5rem 0 0 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 `;
 
 export const TechLogoContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    // border: 1px solid black;
+    align-items: center;
     margin: 0;
 `
 
@@ -74,13 +79,8 @@ export const TechStackText = styled.p`
 `;
 
 export const TechLogo = styled.p`
-  background-color:rgb(171, 171, 171);
   color: black;
-  padding: 5px 10px;
-  border-radius: 1rem;
-  width: 25%;
   margin: 0;
-  text-align: center;
 `;
 
 export const ButtonContainer = styled.div`

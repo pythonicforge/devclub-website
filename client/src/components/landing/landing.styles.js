@@ -21,7 +21,7 @@ export const LandingContainer = styled.div`
     margin: -2.5rem;
   }
   background: url('../../../public/images/Canopus.png');
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
 `;

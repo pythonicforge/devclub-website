@@ -7,10 +7,10 @@ import { ProjectCard } from '../cards';
 
 const projectsData = {
   active: [
-    { title: "NXTUP", banner: bannerImg, status: "running", livePreview: "https://nxtup.in", github: "https://github.com", techStack: ["python", "js"] }, { title: "NXTUP", banner: bannerImg, status: "running", livePreview: "https://nxtup.in", github: "https://github.com", techStack: ["python", "js"] }, { title: "NXTUP", banner: bannerImg, status: "running", livePreview: "https://nxtup.in", github: "https://github.com", techStack: ["python", "js"] }, { title: "NXTUP", banner: bannerImg, status: "running", livePreview: "https://nxtup.in", github: "https://github.com", techStack: ["python", "js"] }
+    { title: "NXTUP", banner: bannerImg, status: "running", livePreview: "https://nxtup.in", github: "https://github.com", techStack: ["python", "js"] }, { title: "NXTUP", banner: bannerImg, status: "running", livePreview: "https://nxtup.in", github: "https://github.com", techStack: ["python", "js"] }, { title: "NXTUP", banner: bannerImg, status: "running", livePreview: "https://nxtup.in", github: "https://github.com", techStack: ["python", "js"] }
   ],
   past: [
-    { title: "CapEval", banner: bannerImg, status: "in progress", livePreview: "LinkedIn", github: "Hardik", techStack: ["python", "js"] }
+    { title: "CapEval", banner: bannerImg, status: "in progress", livePreview: "LinkedIn", github: "Hardik", techStack: ["python", "js"] },  { title: "CapEval", banner: bannerImg, status: "in progress", livePreview: "LinkedIn", github: "Hardik", techStack: ["python", "js"] },  { title: "CapEval", banner: bannerImg, status: "in progress", livePreview: "LinkedIn", github: "Hardik", techStack: ["python", "js"] }
   ]
 };
 

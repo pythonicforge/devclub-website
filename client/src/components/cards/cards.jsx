@@ -23,7 +23,7 @@ const ProjectCard = ({ banner, title, status, techStack, livePreview, github }) 
             <BannerImage src={banner} alt={`${title} banner`} />
             <Title>{title}</Title>
             <StatusOuterContainer>
-                <StatusText>Status</StatusText>
+                <StatusText>Current Status</StatusText>
                 <Status status={status} />
             </StatusOuterContainer>
             <TechStack>
