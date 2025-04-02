@@ -3,24 +3,26 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { EventsWrapper, ClubHeading, ThingsHeading, Embla, EmblaContainer, EmblaSlide, TextContainer, ImageContainer, EmblaPagination, EmblaDot } from './Events.styles'; // Import styled-components
 
+import event from '../../../public/images/event.png'
+
 const eventSlides = [
   {
     title: 'Event 1',
     date: '2023-12-01',
     description: 'This is a brief description of Event 1.',
-    image: '/path/to/event1.jpg',
+    image: event,
   },
   {
     title: 'Event 2',
     date: '2023-12-15',
     description: 'This is a brief description of Event 2.',
-    image: '/path/to/event2.jpg',
+    image: event,
   },
   {
     title: 'Event 3',
     date: '2024-01-10',
     description: 'This is a brief description of Event 3.',
-    image: '/path/to/event3.jpg',
+    image: event,
   },
 ];
 
