@@ -20,7 +20,7 @@ const TopProjects = () => {
   const handleTabClick = (tab) => setActiveTab(tab);
 
   return (
-    <TopProjectsSection id="topProjects">
+    <TopProjectsSection id="topProjects" data-aos="fade-up">
       <TopProjectsSectionHeader>
         <TopProjectsImageContainer className="hide-on-small-screens">
           <TopProjectsImage src={left_arrow} alt="Left Arrow" />

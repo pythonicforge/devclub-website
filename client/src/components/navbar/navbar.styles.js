@@ -78,6 +78,7 @@ export const NavLinksContainer = styled.ul`
   display: flex;
   list-style: none;
   gap: ${({ theme }) => theme.spacing.xxl};
+  padding: 0;
 
   @media (max-width: 815px) {
     flex-direction: column;

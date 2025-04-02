@@ -22,5 +22,11 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.typography.font};
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.text};
+    margin: 0;
+    padding: 0;
   }
+
+  html{
+  margin: 0;
+    padding: 0;}
 `;

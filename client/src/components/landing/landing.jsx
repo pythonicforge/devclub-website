@@ -11,14 +11,14 @@ import red_stars from '../../../public/images/red_stars.png'
 
 const Landing = () => {
     return (
-        <LandingContainer>
+        <LandingContainer data-aos="zoom-in">
             <ImageContainer>
                 <Image src={universityLogo} alt='University Logo' />
             </ImageContainer>
-            <HeroSubHeading>
+            <HeroSubHeading data-aos="fade-up" data-aos-delay="200">
                 Actively drinking a cup of tea & programming!
             </HeroSubHeading>
-            <HeroHeadingLine1>
+            <HeroHeadingLine1 data-aos="fade-up" data-aos-delay="400">
                 Innovating
                 <ImageContainer5>
                     <Image5 src={blue_stars} alt="Blue Stars" />

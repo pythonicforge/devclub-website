@@ -51,8 +51,7 @@ export const Embla = styled.div`
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add drop shadow */
 
-  @media (max-width: 768px) {
-    margin: 0 1rem; /* Add margin on smaller screens */
+  @media (max-width: 768px) { /* Add margin on smaller screens */
     border-radius: 1rem; /* Reduce border radius for smaller screens */
   }
 `;

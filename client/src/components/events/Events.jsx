@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { EventsWrapper, ClubHeading, ThingsHeading, Embla, EmblaContainer, EmblaSlide, TextContainer, ImageContainer, EmblaPagination, EmblaDot } from './Events.styles'; // Import styled-components
+import { MovingTextSection, MovingText } from './MovingText.styles'; // Import styles for the moving text section
+import Footer from './Footer'; // Import the Footer component
 
 import event from '../../../public/images/event.png'
 
@@ -27,7 +29,10 @@ const eventSlides = [
 ];
 
 const Events = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })]); // Autoplay with 3-second delay
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, speed: 5, skipSnaps: false }, // Ensure snaps are not skipped
+    [Autoplay({ delay: 3000 })] // Autoplay with 3-second delay
+  );
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -35,6 +40,7 @@ const Events = () => {
     const paginationDots = document.querySelectorAll('.embla__dot');
 
     const updatePagination = () => {
+      if (!emblaApi) return; // Ensure emblaApi is ready
       const selectedIndex = emblaApi.selectedScrollSnap();
       paginationDots.forEach((dot, index) => {
         dot.classList.toggle('is-selected', index === selectedIndex);
@@ -42,6 +48,7 @@ const Events = () => {
     };
 
     const onDotClick = (index) => {
+      if (!emblaApi) return; // Ensure emblaApi is ready
       emblaApi.scrollTo(index);
     };
 
@@ -53,6 +60,7 @@ const Events = () => {
     updatePagination(); // Initialize pagination on mount
 
     return () => {
+      if (!emblaApi) return; // Ensure emblaApi is ready
       emblaApi.off('select', updatePagination);
       paginationDots.forEach((dot, index) => {
         dot.removeEventListener('click', () => onDotClick(index));
@@ -61,34 +69,50 @@ const Events = () => {
   }, [emblaApi]);
 
   return (
-    <EventsWrapper>
-      <ClubHeading>Club Events</ClubHeading>
-      <ThingsHeading>Things for you ❤️</ThingsHeading>
-      <Embla>
-        <div className="embla__viewport" ref={emblaRef}>
-          <EmblaContainer>
-            {eventSlides.map((slide, index) => (
-              <EmblaSlide key={index}>
-                <TextContainer>
-                  <h3>{slide.title}</h3>
-                  <p className="event-date">Scheduled on {slide.date}</p>
-                  <p>{slide.description}</p>
-                  <button>Register Now</button>
-                </TextContainer>
-                <ImageContainer>
-                  <img src={slide.image} alt={slide.title} />
-                </ImageContainer>
-              </EmblaSlide>
+    <>
+      <EventsWrapper id="events" data-aos="fade-up">
+        <ClubHeading>Club Events</ClubHeading>
+        <ThingsHeading>Things for you ❤️</ThingsHeading>
+        <Embla>
+          <div className="embla__viewport" ref={emblaRef}>
+            <EmblaContainer>
+              {eventSlides.map((slide, index) => (
+                <EmblaSlide key={index} data-aos="fade-up" data-aos-delay={index * 200}>
+                  <TextContainer>
+                    <h3>{slide.title}</h3>
+                    <p className="event-date">Scheduled on {slide.date}</p>
+                    <p>{slide.description}</p>
+                    <button>Register Now</button>
+                  </TextContainer>
+                  <ImageContainer>
+                    <img src={slide.image} alt={slide.title} />
+                  </ImageContainer>
+                </EmblaSlide>
+              ))}
+            </EmblaContainer>
+          </div>
+          <EmblaPagination>
+            {eventSlides.map((_, index) => (
+              <EmblaDot key={index} className="embla__dot"></EmblaDot>
             ))}
-          </EmblaContainer>
-        </div>
-        <EmblaPagination>
-          {eventSlides.map((_, index) => (
-            <EmblaDot key={index} className="embla__dot"></EmblaDot>
-          ))}
-        </EmblaPagination>
-      </Embla>
-    </EventsWrapper>
+          </EmblaPagination>
+        </Embla>
+      
+      <MovingTextSection>
+        <MovingText direction="left" data-text="CYBERSECURITY // BLOCKCHAIN // CLIENT SIDE PROGRAMMING // SERVER SIDE PROGRAMMING // UI-UX DESIGN">
+          CYBERSECURITY // BLOCKCHAIN // CLIENT SIDE PROGRAMMING // SERVER SIDE PROGRAMMING // UI-UX DESIGN
+          CYBERSECURITY // BLOCKCHAIN // CLIENT SIDE PROGRAMMING // SERVER SIDE PROGRAMMING // UI-UX DESIGN
+          CYBERSECURITY // BLOCKCHAIN // CLIENT SIDE PROGRAMMING // SERVER SIDE PROGRAMMING // UI-UX DESIGN
+        </MovingText>
+        <MovingText direction="right" data-text="CYBERSECURITY // BLOCKCHAIN // CLIENT SIDE PROGRAMMING // SERVER SIDE PROGRAMMING // UI-UX DESIGN">
+          CYBERSECURITY // BLOCKCHAIN // CLIENT SIDE PROGRAMMING // SERVER SIDE PROGRAMMING // UI-UX DESIGN
+          CYBERSECURITY // BLOCKCHAIN // CLIENT SIDE PROGRAMMING // SERVER SIDE PROGRAMMING // UI-UX DESIGN
+          CYBERSECURITY // BLOCKCHAIN // CLIENT SIDE PROGRAMMING // SERVER SIDE PROGRAMMING // UI-UX DESIGN
+        </MovingText>
+      </MovingTextSection>
+      <Footer /> {/* Add the Footer component below MovingText */}
+      </EventsWrapper>
+    </>
   );
 };
 

@@ -6,9 +6,15 @@ import Events from '../components/events'
 const Home = () => {
   return (
     <>
-      <Landing />
-      <TopProjects />
-      <Events/>
+      <div data-aos="fade-up">
+        <Landing />
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <TopProjects />
+      </div>
+      <div data-aos="fade-up" data-aos-delay="400">
+        <Events />
+      </div>
     </>
   )
 }
