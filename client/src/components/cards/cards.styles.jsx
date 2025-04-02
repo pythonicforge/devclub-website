@@ -55,13 +55,16 @@ export const StatusOuterContainer = styled.div`
 
 export const StatusText = styled.p`
   font-size: 18px;
+  font-family: "American Typewriter", serif;
+  font-weight: 300;
 `;
 
 export const TechStack = styled.div`
     margin: -1.5rem 0 0 1rem;
     display: flex;
-    gap: 1rem;
+    gap: 0.25rem;
     align-items: center;
+    font-weight: 350;
 `;
 
 export const TechLogoContainer = styled.div`
@@ -73,14 +76,14 @@ export const TechLogoContainer = styled.div`
 `
 
 export const TechStackText = styled.p`
-  text-transform: uppercase;
-//   border: 1px solid black;
-  font-weight: 600;
+  font-family: "Mona Sans", serif;
 `;
 
 export const TechLogo = styled.p`
   color: black;
   margin: 0;
+  font-family: "American Typewriter", serif;
+  text-transform: "capitalize";
 `;
 
 export const ButtonContainer = styled.div`
@@ -104,6 +107,7 @@ export const CapsuleButton = styled.a`
   color: white;
   text-decoration: none;
   margin-right: 10px;
+  font-family: "American Typewriter", serif;
 
   @media (max-width: 768px) {
     padding: 8px 16px;
@@ -118,4 +122,16 @@ export const CapsuleButton = styled.a`
 export const GithubLink = styled.a`
   color: #333;
   text-decoration: none;
+  font-family: "American Typewriter", serif;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+  }
 `;

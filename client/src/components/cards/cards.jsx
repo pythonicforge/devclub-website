@@ -27,10 +27,13 @@ const ProjectCard = ({ banner, title, status, techStack, livePreview, github }) 
                 <Status status={status} />
             </StatusOuterContainer>
             <TechStack>
-                <TechStackText>Tech Stack</TechStackText>
+                <TechStackText>Tech Stack :</TechStackText>
                 <TechLogoContainer>
                     {techStack.map((tech, index) => (
-                        <TechLogo key={index}>{tech}</TechLogo>
+                        <TechLogo key={index}>
+                            {tech.charAt(0).toUpperCase() + tech.slice(1)}
+                            {index < techStack.length - 1 && ', '}
+                        </TechLogo>
                     ))}
                 </TechLogoContainer>
             </TechStack>

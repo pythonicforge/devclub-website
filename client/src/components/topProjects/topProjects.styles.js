@@ -7,6 +7,7 @@ export const TopProjectsSection = styled.div`
   border-top-right-radius: 50px;
   overflow-x: hidden;
   background-size: 50% 50%;
+  border-radius: 4rem;
 
   @media (max-width: 1024px) {
     background-size: 60% 60%;
@@ -14,6 +15,7 @@ export const TopProjectsSection = styled.div`
 
   @media (max-width: 768px) {
     background-size: 70% 70%;
+    border-radius: 2rem;
   }
 
   @media (max-width: 480px) {
@@ -120,6 +122,10 @@ export const Tab = styled.button`
   position: relative;
   z-index: 1;
 
+  &:hover {
+    color: ${({ active }) => (active ? '#fff' : '#000')}; /* Disable hover effect */
+  }
+
   @media (max-width: 768px) {
     padding: 0.5rem 1rem;
     font-size: ${({ theme }) => theme.typography.sizes.sm};
@@ -142,9 +148,11 @@ export const ProjectsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(415px, 1fr));
   justify-items: center;
+  margin-bottom: 3rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 2rem;
+    margin-bottom: 2rem;
   }
 `;

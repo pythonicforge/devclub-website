@@ -18,6 +18,13 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <NavbarContainer>
       <ImageContainer to={'/'}>
@@ -31,21 +38,13 @@ const Navbar = () => {
           <GrHomeRounded />
           <NavLinkText to={'/'}>Home</NavLinkText>
         </NavLink>
-        <NavLink>
+        <NavLink onClick={() => scrollToSection('topProjects')}>
           <IoGitMergeOutline />
-          <NavLinkText to={'/projects'}>Projects</NavLinkText>
-        </NavLink>
-        <NavLink>
-          <BsGear />
-          <NavLinkText to={'/achievements'}>Achievements</NavLinkText>
+          <NavLinkText>Projects</NavLinkText>
         </NavLink>
         <NavLink>
           <SlCalender />
           <NavLinkText to={'/events'}>Events</NavLinkText>
-        </NavLink>
-        <NavLink>
-          <IoWaterOutline />
-          <NavLinkText to={'/resources'}>Resources</NavLinkText>
         </NavLink>
         <NavLink>
           <TbUserCode />
@@ -61,9 +60,9 @@ const Navbar = () => {
             <GrHomeRounded />
             <NavLinkText to={'/'}>Home</NavLinkText>
           </NavLink>
-          <NavLink onClick={toggleMenu}>
+          <NavLink onClick={() => { scrollToSection('topProjects'); toggleMenu(); }}>
             <IoGitMergeOutline />
-            <NavLinkText to={'/projects'}>Projects</NavLinkText>
+            <NavLinkText>Projects</NavLinkText>
           </NavLink>
           <NavLink onClick={toggleMenu}>
             <BsGear />
